@@ -31,7 +31,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  // StrictMode: renderiza 2 veces los componentes (de forman intencional) para ayudarte a detectar efectos secundarios
+  // de la renderización. Sólo ocurre durante el desarrollo.
+  // <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
