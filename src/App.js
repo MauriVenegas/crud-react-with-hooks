@@ -3,8 +3,14 @@ import AddUserForm from "./Components/forms/AddUserForm";
 import EditUserForm from "./Components/forms/EditUserForm";
 import UserTable from "./Components/tables/UserTable";
 import { v4 as uuidv4 } from "uuid";
+import { useParams } from "react-router-dom";
 
 const App = () => {
+
+  // Accede al id de la URL
+  const {id} = useParams();
+  console.log(id);
+
   // Setting state
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState({});
