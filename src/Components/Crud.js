@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import AddUserForm from "./Components/forms/AddUserForm";
-import EditUserForm from "./Components/forms/EditUserForm";
-import UserTable from "./Components/tables/UserTable";
+import AddUserForm from "./crud/forms/AddUserForm";
+import EditUserForm from "./crud/forms/EditUserForm";
+import UserTable from "./crud/tables/UserTable";
 import { v4 as uuidv4 } from "uuid";
 import { useParams } from "react-router-dom";
 
-const App = () => {
+const Crud = () => {
 
   // Accede al id de la URL
   const {id} = useParams();
-  console.log(id);
+  id && console.log(id);
 
   // Setting state
   const [users, setUsers] = useState([]);
@@ -55,7 +55,7 @@ const App = () => {
   };
 
   return (
-    <div className="container">
+    <>
       <h1>CRUD App with Hooks</h1>
       <div className="flex-row">
         <div className="flex-large">
@@ -86,8 +86,8 @@ const App = () => {
 					/>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default App;
+export default Crud;

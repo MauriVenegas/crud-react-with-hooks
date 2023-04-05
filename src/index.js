@@ -1,15 +1,21 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import "./index.css";
-import App from "./App";
-import RootRoute from "./Components/Route/RootRoute";
-import ErrorPage from "./Components/Route/ErrorPage";
+import Crud from "./components/Crud";
 
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RootRoute from "./components/route/RootRoute";
+import ErrorPage from "./components/route/ErrorPage";
+
+import Redux from "./components/PokemonesRedux";
+import { Provider } from "react-redux";
+import GenerateStore from "./components/redux/Store";
+
+const store = GenerateStore();
 
 const router = createBrowserRouter([
   {
@@ -18,12 +24,16 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/app",
-        element: <App />,
+        path: "/crud",
+        element: <Crud />,
       },
       {
-        path: "/app/dropdown/:id",
-        element: <App />,
+        path: "/redux",
+        element: <Provider store={store}> <Redux /> </Provider>,
+      },
+      {
+        path: "/crud/dropdown/:id",
+        element: <Crud />,
       },
     ],
   },
