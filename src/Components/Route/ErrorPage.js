@@ -8,9 +8,7 @@ export default function ErrorPage() {
     <div id="error-page" className="center">
       <h1>Oops!</h1>
       <p>Perdón, a ocurrido un error inesperado</p>
-      <p>
-        {/* <i>{error.statusText || error.message}</i> */}
-      </p>
+      <p>{/* <i>{error.statusText || error.message}</i> */}</p>
     </div>
-  );
+  )
 }

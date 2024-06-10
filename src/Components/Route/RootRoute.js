@@ -1,11 +1,11 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link } from 'react-router-dom'
 
 export default function RootRoute() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to={"/"}>
+          <Link className="navbar-brand" to={'/'}>
             Navbar
           </Link>
           <button
@@ -25,20 +25,20 @@ export default function RootRoute() {
                 <Link
                   className="nav-link active"
                   aria-current="page"
-                  to={"/crud"}
+                  to={'/crud'}
                 >
                   CRUD
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={"/redux"}>
+                <Link className="nav-link" to={'/redux'}>
                   Redux
                 </Link>
               </li>
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
-                  to={"/crud"}
+                  to={'/crud'}
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -47,12 +47,12 @@ export default function RootRoute() {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to={"/crud/dropdown/1"}>
+                    <Link className="dropdown-item" to={'/crud/dropdown/1'}>
                       Action
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to={"/crud/dropdown/2"}>
+                    <Link className="dropdown-item" to={'/crud/dropdown/2'}>
                       Another action
                     </Link>
                   </li>
@@ -60,14 +60,14 @@ export default function RootRoute() {
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link className="dropdown-item" to={"/crud/dropdown/3"}>
+                    <Link className="dropdown-item" to={'/crud/dropdown/3'}>
                       Something else here
                     </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link disabled" to={"/crud"}>
+                <Link className="nav-link disabled" to={'/crud'}>
                   Disabled
                 </Link>
               </li>
@@ -91,5 +91,5 @@ export default function RootRoute() {
         <Outlet />
       </div>
     </>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const UserTable = (props) => (
   <table>
@@ -17,7 +17,9 @@ const UserTable = (props) => (
             <td>{user.userName}</td>
             <td>
               <button
-                onClick={() => {props.editRow(user)}}
+                onClick={() => {
+                  props.editRow(user)
+                }}
                 className="button muted-button"
               >
                 Edit
@@ -38,6 +40,6 @@ const UserTable = (props) => (
       )}
     </tbody>
   </table>
-);
+)
 
-export default UserTable;
+export default UserTable
